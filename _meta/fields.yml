@@ -1,0 +1,39 @@
+- key: pprofbeat
+  title: pprofbeat fields
+  description:
+  fields:
+    - name: duration
+      type: double
+      description: duration of the sample
+
+    - name: period.cpu.ns
+      type: long
+      description: CPU sampling period
+
+    - name: period.space.bytes
+      type: long
+      description: heap sampling period
+
+    - name: samples
+      type: group
+      fields:
+        - name: count
+          type: long
+
+        - name: cpu.ns
+          type: long
+
+        - name: alloc_objects.count
+          type: long
+
+        - name: alloc_space.bytes
+          type: long
+
+        - name: inuse_objects.count
+          type: long
+
+        - name: inuse_space.bytes
+          type: long
+
+        - name: locations
+          type: array

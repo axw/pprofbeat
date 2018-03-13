@@ -1,0 +1,11 @@
+################### pprofbeat configuration example #########################
+
+pprofbeat:
+  # Defines how often to gather profiles and send them to the output.
+  period: 10s
+  url: http://localhost:8080
+  fetch_duration: 5s
+
+output.elasticsearch:
+  # Array of hosts to connect to.
+  hosts: ["localhost:9200"]
